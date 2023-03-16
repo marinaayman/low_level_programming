@@ -4,7 +4,6 @@
  * main - Entry point
  *
  * Description: 'the program uses puts function to print text'
- * @parameter: no parameter specified.
  *
  * Return: Always 0 (Success)
  */
