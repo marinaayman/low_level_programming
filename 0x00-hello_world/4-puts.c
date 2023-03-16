@@ -1,16 +1,15 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
  * Description: 'the program uses puts function to print text'
- * @parameter: 
- *            str1 : contain the text to be printed.
+ * @parameter: no parameter specified.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char str1[] = "\"Programming is like building a multilingual puzzle";
-	puts(str1);
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
