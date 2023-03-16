@@ -4,7 +4,6 @@
  * main - Entry point
  *
  * Description: 'the program prints the sizes of computer types'
- * 
  * Return: Always 0 (Success)
  */
 int main(void)
