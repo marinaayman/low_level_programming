@@ -2,7 +2,9 @@
 
 /**
   * main - Entry Point
+  *
   * Description : 'the program display a quote with putchar function'
+  * Return: Always 1 (Success)
   */
 int main(void)
 {
