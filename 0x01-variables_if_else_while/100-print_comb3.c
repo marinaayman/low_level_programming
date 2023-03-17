@@ -16,7 +16,7 @@ int main(void)
 		{
 			if (i == j)
 				continue;
-			if (i <= j)
+			if (i < j)
 			{
 				putchar('0' + i);
 				putchar('0' + j);
