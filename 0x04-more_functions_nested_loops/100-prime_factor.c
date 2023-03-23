@@ -14,7 +14,7 @@ int main(void)
 	long int number = 612852475143;
 	long int i;
 
-	while(number % 2 == 0)
+	while (number % 2 == 0)
 		number = number / 2;
 	for (i = 3; i <= sqrt(number); i += 2)
 	{
