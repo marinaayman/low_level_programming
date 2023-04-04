@@ -11,12 +11,9 @@ unsigned int _strspn(char *s, char *accept)
 {
 	char *a = s;
 
-	if (accept[0] == '\0')
-		return 0;
-
 	while (*s)
-		for (; *s == *accept; s++);
+		for (; *s == *accept; s++)
+			;
 
 	return (s - a);
-	
 }
