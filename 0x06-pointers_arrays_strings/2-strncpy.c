@@ -2,7 +2,8 @@
 
 /**
   * _strncpy- copies a string and work exactly as strncpy.
-  * @dest:the pointer to the destination array where the content is to be copied.
+  * @dest:the pointer to the destination array
+  *       where the content is to be copied.
   * @src:the string to be copied.
   * @n: The number of characters to be copied from source.
   * Return: a pointer to the copied string.
