@@ -8,15 +8,9 @@
 
 void _print_rev_recursion(char *s)
 {
-	char *p = s;
-	unsigned int len = 0;
-
-	while (*p)
-		p++;
-	len = p - s - 1;
-	if (len--)
+	if (*s)
 	{
-		_putchar(*p);
-		_print_rev_recursion(p - 1);
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
 	}
 }
