@@ -25,6 +25,9 @@ char *str_concat(char *s1, char *s2)
 
 	newstr = malloc(sizeof(char) * (len1 + len2 + 1));
 
+	if (newstr == NULL)
+		return (NULL);
+
 	for (i = 0; s1[i]; i++)
 		newstr[i] = s1[i];
 
