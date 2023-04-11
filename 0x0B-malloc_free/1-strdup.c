@@ -9,7 +9,9 @@
   * Return: NULL if str = NULL or insufficient memory was available.
   *         a pointer to the duplicated string on success.
   */
+
 int _strlen(char *s);
+
 char *_strcpy(char *dest, char *src);
 
 char *_strdup(char *str)
@@ -29,6 +31,12 @@ char *_strdup(char *str)
 	return (newstr);
 }
 
+/**
+ * _strlen- compute the length of string.
+ * @s: the string to be manipulated.
+ * Return: length of the string.
+ */
+
 int _strlen(char *s)
 {
 	int i;
@@ -38,6 +46,13 @@ int _strlen(char *s)
 
 	return (i);
 }
+
+/**
+  * _strcpy- copy string to new location.
+  * @dest: the copied string.
+  * @src: the string to be copied.
+  * Return: pointer to new location.
+  */
 
 char *_strcpy(char *dest, char *src)
 {
