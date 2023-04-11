@@ -10,59 +10,23 @@
   *         a pointer to the duplicated string on success.
   */
 
-int _strlen(char *s);
-
-char *_strcpy(char *dest, char *src);
-
 char *_strdup(char *str)
 {
 	char *newstr;
+	int i, size = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	newstr = malloc(sizeof(char) * (_strlen(str) + 1));
+	for (i = 0; str[i] != '\0'; i++)
+		size++;
+
+	newstr = malloc(sizeof(char) * (size + 1));
 
 	if (newstr == NULL)
 		return (NULL);
-
-	_strcpy(newstr, str);
+	for (i = 0; str[i] != '\0'; i++)
+		newstr[i] = str[i];
 
 	return (newstr);
-}
-
-/**
- * _strlen- compute the length of string.
- * @s: the string to be manipulated.
- * Return: length of the string.
- */
-
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; *s++ != '\0'; i++)
-	{}
-
-	return (i);
-}
-
-/**
-  * _strcpy- copy string to new location.
-  * @dest: the copied string.
-  * @src: the string to be copied.
-  * Return: pointer to new location.
-  */
-
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; i <= _strlen(src); i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
-
-	return (dest);
 }
