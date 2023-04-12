@@ -47,12 +47,12 @@ char **strtow(char *str)
 
 	if (!str || !*str)
 		return (NULL);
-	for (i = 0; str[i] == ' ' && !str[i + 1];)
-		return (NULL);
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			num_words++;
+		else
+			return (NULL);
 	}
 
 	words = malloc(sizeof(char *) * (num_words + 1));
