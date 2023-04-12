@@ -45,7 +45,9 @@ char **strtow(char *str)
 	int num_words = 0, i, j = 0, k, size;
 	char **words;
 
-	if (!str || !*str || str == " ")
+	if (!str || !*str)
+		return (NULL);
+	for (i = 0; str[i] == ' ' && !str[i + 1];)
 		return (NULL);
 	for (i = 0; str[i]; i++)
 	{
