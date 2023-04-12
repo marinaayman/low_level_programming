@@ -51,8 +51,6 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			num_words++;
-		else
-			return (NULL);
 	}
 
 	words = malloc(sizeof(char *) * (num_words + 1));
