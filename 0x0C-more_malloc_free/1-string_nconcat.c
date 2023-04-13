@@ -47,26 +47,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 
-	if (n >= _strlen(s2))
+	while (s2[index] && n--)
 	{
-		while (s2[index])
-		{
-			ptr[i] = s2[index];
-			i++;
-			index++;
-		}
-		ptr[i] = '\0';
+		ptr[i] = s2[index];
+		i++;
+		index++;
 	}
-	else
-	{
-		while (s2[index] && n--)
-		{
-			ptr[i] = s2[index];
-			i++;
-			index++;
-		}
-		ptr[i] = '\0';
-	}
-
+	ptr[i] = '\0';
 	return (ptr);
 }
