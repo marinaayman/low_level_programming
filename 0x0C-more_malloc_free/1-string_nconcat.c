@@ -16,6 +16,8 @@ unsigned int _strlen(char *str)
 		len++;
 		i++;
 	}
+	if (len == 0)
+		len = 1;
 	return (len);
 }
 
