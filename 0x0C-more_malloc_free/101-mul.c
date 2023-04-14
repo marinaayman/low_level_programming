@@ -107,7 +107,7 @@ char *_multiply(char *num1, char *num2)
 	int len1 = _len(num1);
 	int len2 = _len(num2);
 	int len_result = len1 + len2;
-	char *result = _calloc(len_result + 1, sizeof(char));
+	char *result = _calloc(len_result, sizeof(char));
 
 	for (i = len1 - 1; i >= 0; i--)
 	{
@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
 	is_positive_decimal_number(argv[2]);
 
 	result = _multiply(argv[1], argv[2]);
-	while (result[start] == '0' && result[start] != '\0')
+	while (result[start] == '0' && start < _len(result))
 		start++;
 	_puts(result + start);
 	free(result);
