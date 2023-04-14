@@ -26,11 +26,6 @@ void is_positive_decimal_number(char *num)
 {
 	int i;
 
-	if (num[0] == '0' || num[0] == '-')
-	{
-		_puts("Error");
-		exit(98);
-	}
 	for (i = 0; num[i] != '\0'; i++)
 	{
 		if (!(num[i] >= '0' && num[i] <= '9'))
