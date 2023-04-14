@@ -88,7 +88,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	p = ptr;
 	while (total--)
 	{
-		p[i] = 0;
+		p[i] = '0';
 		i++;
 	}
 	return (ptr);
