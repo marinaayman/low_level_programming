@@ -119,7 +119,8 @@ char *_multiply(char *num1, char *num2)
 			result[i + j] += temp / 10;
 		}
 	}
-
+	for (i = 0; i < len_result; i++)
+		result[i] += '0';
 	return (result);
 }
 /**
