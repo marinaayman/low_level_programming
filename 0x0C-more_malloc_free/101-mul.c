@@ -29,8 +29,8 @@ void is_positive_decimal_number(char *num)
 	if (num[0] == '0' || num[0] == '-')
 	{
 		_puts("Error");
- 		exit(98);
- 	}
+		exit(98);
+	}
 	for (i = 0; num[i] != '\0'; i++)
 	{
 		if (!(num[i] >= '0' && num[i] <= '9'))
@@ -74,11 +74,17 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int total, i = 0;
 
 	if (nmemb == 0 || size == 0)
-		return(NULL);
+	{
+		_puts("Error");
+		exit(98);
+	}
 	total = nmemb * size;
 	ptr = malloc(total);
 	if (!ptr)
-		return (NULL);
+	{
+		_puts("Error");
+		exit(98);
+	}
 	p = ptr;
 	while (total--)
 	{
