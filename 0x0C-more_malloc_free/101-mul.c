@@ -26,7 +26,7 @@ void is_positive_decimal_number(char *num)
 {
 	int i;
 
-	if (num[0] == '0' || num[0] == '-')
+	if (num[0] == '-')
 	{
 		_puts("Error");
 		exit(98);
