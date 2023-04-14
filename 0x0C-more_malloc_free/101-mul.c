@@ -15,13 +15,12 @@ void _puts(char *str)
 }
 
 /**
-  * is_positive_deciaml_number- checks if the number is positive
+  * is_positive_decimal_number- checks if the number is positive
   *                             decimal with only digits.
   * @num: the number to be checked.
   * Return: void on success.
   *         98 on failure.
   */
-
 void is_positive_decimal_number(char *num)
 {
 	int i;
