@@ -145,6 +145,8 @@ int main(int argc, char *argv[])
 	result = _multiply(argv[1], argv[2]);
 	while (result[start] == '0' && result[start] != '\0')
 		start++;
+	if (start == _len(result))
+		start = 0;
 	_puts(result + start);
 	free(result);
 	return (0);
