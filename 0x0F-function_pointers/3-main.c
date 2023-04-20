@@ -26,7 +26,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 	if (((strspn(argv[1], "0123456789") != strlen(argv[1])) ||
 	   (strspn(argv[3], "0123456789") != strlen(argv[3]))) ||
-	   (get_op_func(operator) == NULL || *(operator + 1) != '\0'))
+	   (get_op_func(operator) == NULL || *(operator + 1) != '\0') &&
+	   (num1 == 0 || num2 == 0))
 	{
 		printf("Error\n");
 		exit(99);
