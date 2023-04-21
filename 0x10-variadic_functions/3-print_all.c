@@ -77,8 +77,7 @@ void print_all(const char * const format, ...)
 		if (i != 4)
 		{
 			s[i].format_func(string);
-			if (*(format_str + 1) != '\0')
-				printf(", ");
+			PRINT_COMMA_IF_NOT_NULL(*(format_str + 1));
 		}
 		format_str++;
 	}
