@@ -75,7 +75,11 @@ void print_all(const char * const format, ...)
 		}
 
 		if (i != 4)
+		{
 			s[i].format_func(string);
+			if (*(format_str + 1) != '\0')
+				printf(", ");
+		}
 		format_str++;
 	}
 	va_end(string);
