@@ -58,7 +58,7 @@ void print_string(va_list args)
 void print_all(const char * const format, ...)
 {
 	va_list string;
-	int i = 0;
+	int i;
 	const char *format_str = format;
 	format_specifier s[] = {{'c', print_char},
 				{'i', print_int},
@@ -68,20 +68,15 @@ void print_all(const char * const format, ...)
 	va_start(string, format);
 	while (*format_str)
 	{
-		if (*format_str != s[i].c)
+		i = 0;
+		while (i < 4 && *format_str != s[i].c)
 		{
 			i++;
-			if (i < 4)
-				continue;
-			i = 0;
-			format_str++;
-			continue;
 		}
-		s[i].format_func(string);
-		if (*(format_str + 1) != '\0')
-			printf(", ");
+
+		if (i != 4)
+			s[i].format_func(string);
 		format_str++;
-		i = 0;
 	}
 	va_end(string);
 	printf("\n");
