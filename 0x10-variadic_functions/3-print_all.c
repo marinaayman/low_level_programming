@@ -42,6 +42,7 @@ void print_float(va_list args)
 void print_string(va_list args)
 {
 	char *str = va_arg(args, char*);
+
 	if (str == NULL)
 		str = "(nil)";
 	printf("%s", str);
@@ -59,11 +60,11 @@ void print_all(const char * const format, ...)
 	va_list string;
 	int i = 0;
 	const char *format_str = format;
-	format_specifier s[] = { {'c', print_char},
-		                 {'i', print_int},
-			         {'f', print_float},
-			         {'s', print_string}};
-	
+	format_specifier s[] = {{'c', print_char},
+				{'i', print_int},
+				{'f', print_float},
+				{'s', print_string}};
+
 	va_start(string, format);
 	while (*format_str)
 	{
