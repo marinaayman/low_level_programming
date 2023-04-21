@@ -17,5 +17,5 @@ typedef struct format_specifier
 {
 	char c;
 	void (*format_func)(va_list);
-}format_specifier;
+} format_specifier;
 #endif /*VARIADIC_FUNCTIONS_H*/
