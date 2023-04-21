@@ -64,9 +64,8 @@ void print_all(const char * const format, ...)
 				{'i', print_int},
 				{'f', print_float},
 				{'s', print_string}};
-
 	va_start(string, format);
-	while (*format_str)
+	while (format_str != NULL && *format_str)
 	{
 		i = 0;
 		while (i < 4 && *format_str != s[i].c)
