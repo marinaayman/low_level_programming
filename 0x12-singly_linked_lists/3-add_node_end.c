@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
   * _strlen- returns the length of string.
-  * @list: pointer to struct.
+  * @string: string.
   * Return: length.
   */
 unsigned int _strlen(const char *string)
@@ -9,7 +9,7 @@ unsigned int _strlen(const char *string)
 	unsigned int length = 0;
 
 	while (string[length] != '\0')
-			length++;
+		length++;
 	return (length);
 }
 
