@@ -4,12 +4,12 @@
   * @list: pointer to struct.
   * Return: length.
   */
-unsigned int _strlen(list_t *list)
+unsigned int _strlen(const char *string)
 {
 	unsigned int length = 0;
 
-	while (list->str[length] != '\0')
-		length++;
+	while (string[length] != '\0')
+			length++;
 	return (length);
 }
 
@@ -45,7 +45,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
-	new_node->len = _strlen(new_node);
+	new_node->len = _strlen(str);
 	new_node->next = NULL;
 
 	if (*head == NULL)

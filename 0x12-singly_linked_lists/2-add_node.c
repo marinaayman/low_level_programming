@@ -8,8 +8,9 @@ unsigned int _strlen(list_t *list)
 {
 	unsigned int length = 0;
 
-	while (list->str[length] != '\0')
-		length++;
+	if (list != NULL && list->str != NULL)
+		while (list->str[length] != '\0')
+			length++;
 	return (length);
 }
 
