@@ -13,7 +13,7 @@ listint_t *find_last_node(listint_t *head)
 }
 
 /**
-  * add_node_end- adds a new node at the end of a listint_t list.
+  * add_nodeint_end- adds a new node at the end of a listint_t list.
   * @head: A pointer to the head of the listint_t list.
   * @n: The number to be added to the listint_t list.
   * Return: the address of the new element, or NULL if it failed.
