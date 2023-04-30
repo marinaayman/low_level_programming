@@ -13,8 +13,6 @@ const listint_t *loop_head(const listint_t *fast, const listint_t *head)
 
 	while (fast != slow)
 	{
-		if (fast == NULL || slow == NULL)
-			exit(98);
 		fast = fast->next;
 		slow = slow->next;
 	}
@@ -73,7 +71,7 @@ const listint_t *detect_loop(const listint_t *head)
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes_num = 0, len = 0, i;
+	size_t nodes_num = 0, len = 0, i = 0;
 	const listint_t *ptr = NULL, *loophead = NULL;
 
 	if (head == NULL)
