@@ -4,6 +4,7 @@
   * isprime- checks primality.
   * @n: number.
   * @i: iterator.
+  * @c: number.
   * Return: 1, it not primality.
   *         0, otherwise.
   */
