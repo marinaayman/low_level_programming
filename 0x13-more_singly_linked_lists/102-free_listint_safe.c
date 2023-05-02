@@ -101,5 +101,6 @@ size_t free_listint_safe(listint_t **h)
 		nodes_num++;
 	}
 	h = NULL;
+	free(tmp);
 	return (nodes_num);
 }
