@@ -8,19 +8,18 @@
   *         0, otherwise.
   */
 
-int isprime(int n, int i)
-{
-	int c = 0;
-	
-	if (i <= n)
+int isprime(int n, int i, int c)
+{	
+	if (i <= n && c < 2)
 	{	
 		if (n % i == 0)
 		{	
 			c++;
-			isprime(n, i + 1);
 		}
+		return (isprime(n, i + 1, c));
 	}
-	return (c);
+	else
+		return (c);
 }
 /**
   * is_prime_number- checks if the number is prime.
@@ -35,7 +34,7 @@ int is_prime_number(int n)
 
 	if (n <= 1)
 		return (0);
-	c = isprime(n, 2);
+	c = isprime(n, 2, c);
 	if (c == 1)
 		return (1);
 	else
