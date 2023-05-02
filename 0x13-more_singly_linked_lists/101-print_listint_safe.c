@@ -74,7 +74,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t nodes_num = 0, len = 0, i = 0;
 	const listint_t *ptr = NULL, *loophead = NULL;
 
-	if (head == NULL)
+	if (head == NULL || head == head->next)
 		exit(98);
 	ptr = detect_loop(head);
 	if (ptr != NULL)
