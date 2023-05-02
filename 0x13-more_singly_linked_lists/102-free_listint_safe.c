@@ -20,7 +20,7 @@ listint_t *cycle_head(listint_t *fast, listint_t *head)
 }
 
 /**
-  * loop_cycle- get the length of the loop.
+  * cycle_len- get the length of the loop.
   * @fast: a pointer.
   * @slow: a pointer.
   * Return: length.
@@ -63,10 +63,10 @@ listint_t *detect_cycle(listint_t *head)
 	return (NULL);
 }
 /**
-  * print_listint_safe- prints a listint_t linked list.
-  * @head: A pointer to the pointer to the head of the listint_t list.
+  * free_listint_safe- prints a listint_t linked list.
+  * @h: A pointer to the pointer to the head of the listint_t list.
   * Return: the number of nodes in the list.
-  *         error 98, if failure.
+  *
   */
 size_t free_listint_safe(listint_t **h)
 {
@@ -74,7 +74,7 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *ptr = NULL, *loophead = NULL, *tmp = *h;
 
 	if (h == NULL || *h == NULL)
-		exit(98);
+		return (0);
 	ptr = detect_cycle(*h);
 	if (ptr != NULL)
 	{
