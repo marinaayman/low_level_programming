@@ -9,11 +9,11 @@
   */
 
 int isprime(int n, int i, int c)
-{	
+{
 	if (i <= n && c < 2)
-	{	
+	{
 		if (n % i == 0)
-		{	
+		{
 			c++;
 		}
 		return (isprime(n, i + 1, c));
