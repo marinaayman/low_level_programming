@@ -72,17 +72,25 @@ const listint_t *detect_loop(const listint_t *head)
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodes_num = 0, len = 0, i = 0;
-	const listint_t *ptr = NULL, *loophead = NULL;
+	const listint_t *ptr = NULL, *loophead = NULL, *copy = head;
 
 	if (head == NULL)
 		exit(98);
 	ptr = detect_loop(head);
+	while (ptr != NULL)
+	{
+		if (copy == head->next)
+		{
+			exit(98);
+		}
+		copy = head->next;
+	}
 	if (ptr != NULL)
 	{
 		len = loop_len(ptr, ptr);
 		loophead = loop_head(ptr, head);
 	}
-	while (head != NULL && !(head->next == head))
+	while (head != NULL)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
 		nodes_num++;
