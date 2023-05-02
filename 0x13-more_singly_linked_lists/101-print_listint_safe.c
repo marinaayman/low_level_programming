@@ -80,6 +80,8 @@ size_t print_listint_safe(const listint_t *head)
 	if (ptr != NULL)
 	{
 		len = loop_len(ptr, ptr);
+		if (len == 1)
+			exit(98);
 		loophead = loop_head(ptr, head);
 	}
 	while (head != NULL)
