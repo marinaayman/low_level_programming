@@ -74,7 +74,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t nodes_num = 0, len = 0, i = 0;
 	const listint_t *ptr = NULL, *loophead = NULL;
 
-	if (head == NULL || head == head->next)
+	if (head == NULL)
 		exit(98);
 	ptr = detect_loop(head);
 	if (ptr != NULL)
@@ -82,7 +82,7 @@ size_t print_listint_safe(const listint_t *head)
 		len = loop_len(ptr, ptr);
 		loophead = loop_head(ptr, head);
 	}
-	while (head != NULL)
+	while (head != NULL && !(head->next == head))
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
 		nodes_num++;
