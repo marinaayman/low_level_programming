@@ -75,7 +75,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *ptr = NULL, *loophead = NULL;
 
 	if (head == NULL)
-		exit(98);
+		return (NULL);
 	ptr = detect_loop(head);
 	if (ptr != NULL)
 	{
